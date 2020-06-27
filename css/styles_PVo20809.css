@@ -51,10 +51,14 @@ article{
     background-color: #d2b48c;
     display: grid;
     grid-gap: 10px;
-    grid-template-areas: 
+    grid-template-areas:
+        'introSec'
         'sec1'
         'sec2'
-        'sec3';
+        'sec3'
+        'sec4'
+        'sec5'
+        'sec6';
 }
 
 section{
@@ -71,14 +75,26 @@ footer{
     height: 40px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* tablet layout */
 @media only screen and (min-width: 601px){
-    .sticky {
-        position: fixed;
-        top: 0;
-        width: 80%;
-    }
-      
     article{
         /* width: 80%; */
         grid-template-areas: 
@@ -97,6 +113,9 @@ footer{
     /* #sec3{
         margin-top: -70px;
     } */
+
+
+   
 }
 
 /* desktop layout */
