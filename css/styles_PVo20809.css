@@ -1,0 +1,121 @@
+/*
+    External CSS file
+    Author: Phan Vo - 300320809
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: gray;
+}
+
+body{
+    min-height: 400px;
+    width: 80%;
+    margin: auto;
+}
+
+header, article, footer{
+    font-weight: bold;
+    padding: 5px;
+}
+
+header, footer{
+    background-color: #b0e0e6;
+}
+
+header{
+    height: 100px;
+    /* overflow: hidden; */
+}
+
+#introSec { grid-area: introSec; }
+#sec1 { grid-area: sec1; }
+#sec2 { grid-area: sec2; }
+#sec3 { grid-area: sec3; }
+#sec4 { grid-area: sec4; }
+#sec5 { grid-area: sec5; }
+#sec6 { grid-area: sec6; }
+
+/* mobile layout (default) */
+article{
+    float: right;
+    width: 100%;
+    /* overflow: auto; */
+    /* height: 300px; */
+    padding: 10px;
+    background-color: #d2b48c;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+        'sec1'
+        'sec2'
+        'sec3';
+}
+
+section{
+    padding: 5px;
+    height: 200px;
+    text-align: center;
+    border: 2px dotted blue;
+    font-size: 10pt;
+    background-color: #f08080;
+}
+
+footer{
+    clear: both;
+    height: 40px;
+}
+
+/* tablet layout */
+@media only screen and (min-width: 601px){
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 80%;
+    }
+      
+    article{
+        /* width: 80%; */
+        grid-template-areas: 
+            'introSec introSec'
+            'sec1 sec2'
+            'sec3 sec4'
+            'sec5 sec6';
+    }
+
+    section{
+        background-color: yellow;
+        border: 2px solid red;
+        font-size: 12pt;
+    }
+
+    /* #sec3{
+        margin-top: -70px;
+    } */
+}
+
+/* desktop layout */
+@media only screen and (min-width: 769px){
+    article{
+        width: 80%;
+        grid-template-areas:
+            'introSec introSec introSec' 
+            'sec1 sec2 sec3'
+            'sec4 sec5 sec6';
+    }
+
+    section{
+        background-color: #90ee90;
+        border: 3px double blue;
+        font-size: 14pt;
+    }
+
+    #sec3{
+        margin-top: 0;
+    }
+}

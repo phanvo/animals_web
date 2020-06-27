@@ -1,0 +1,51 @@
+/*
+    External CSS file
+    Author: Phan Vo - 300320809
+*/
+
+/* mobile layout (default) */
+nav{
+    min-height: 40px;
+    text-align: center;
+    background-color: #faf0e6;
+    /* overflow: hidden; */
+}
+
+/* tablet layout */
+@media only screen and (min-width: 601px){
+    nav{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        /* position: fixed; */
+        
+        position: sticky;
+        top: 0;
+    }
+
+    nav div{
+        flex: 1;
+    }
+}
+
+/* desktop layout */
+@media only screen and (min-width: 769px){
+    nav{
+        display: initial;
+        float: left;
+        width: 20%;
+        height: 640px;
+
+        position: static;
+    }
+
+    nav div{
+        height: 50px;
+        padding: 16px;
+    }
+
+    /* nav div:last-child{
+        background-color: red;
+    } */
+}
