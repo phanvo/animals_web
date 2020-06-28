@@ -78,54 +78,21 @@ footer{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* tablet layout */
 @media only screen and (min-width: 601px){
-    article{
-        /* width: 80%; */
-        grid-template-areas: 
-            'introSec introSec'
-            'sec1 sec2'
-            'sec3 sec4'
-            'sec5 sec6';
-    }
-
     section{
         background-color: yellow;
         border: 2px solid red;
         font-size: 12pt;
     }
-
-    /* #sec3{
-        margin-top: -70px;
-    } */
-
-
-   
 }
+
+
 
 /* desktop layout */
 @media only screen and (min-width: 769px){
     article{
         width: 80%;
-        grid-template-areas:
-            'introSec introSec introSec' 
-            'sec1 sec2 sec3'
-            'sec4 sec5 sec6';
     }
 
     section{
@@ -136,5 +103,25 @@ footer{
 
     #sec3{
         margin-top: 0;
+    }
+
+    #backToTopBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: red; /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+      }
+      
+    #backToTopBtn:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
     }
 }

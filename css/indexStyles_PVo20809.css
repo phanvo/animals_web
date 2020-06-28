@@ -1,0 +1,22 @@
+
+/* tablet layout */
+@media only screen and (min-width: 601px){
+    article{
+        /* width: 80%; */
+        grid-template-areas: 
+            'introSec introSec'
+            'sec1 sec2'
+            'sec3 sec4'
+            'sec5 sec6';
+    }
+}
+
+/* desktop layout */
+@media only screen and (min-width: 769px){
+    article{
+        grid-template-areas:
+            'introSec introSec introSec' 
+            'sec1 sec2 sec3'
+            'sec4 sec5 sec6';
+    }
+}

@@ -28,12 +28,12 @@ nav{
   } */
   
   /* Hide the links inside the navigation menu (except for logo/home) */
-  .topnav #myLinks {
+  #topnav #myLinks {
     display: none;
   }
   
   /* Style navigation menu links */
-  .topnav a {
+  #topnav a {
     /* color: white; */
     padding: 14px 16px;
     text-decoration: none;
@@ -42,7 +42,7 @@ nav{
   }
   
   /* Style the hamburger menu */
-  .topnav a.icon {
+  #topnav a.icon {
     /* background: black; */
     background-image: url('../images/hamburger_menu_icon.png');
     background-size: contain;
@@ -75,22 +75,22 @@ nav{
         display: inline;
     } */
 
-    .topnav{
+    #topnav{
         position: sticky;
     }
 
-    .topnav #myLinks {
+    #topnav #myLinks {
         display: flex !important;
         flex-flow: row nowrap;
         align-items: center;
         justify-content: center;
     }
 
-    .topnav #myLinks a{
+    #topnav #myLinks a{
         flex: 1;
     }
 
-    .topnav a.icon {
+    #topnav a.icon {
         display: none;
     }
 
@@ -118,7 +118,7 @@ nav{
         display: inherit;
     } */
 
-    .topnav {
+    #topnav {
         /* display: initial; */
         float: left;
         width: 20%;
@@ -127,18 +127,18 @@ nav{
         position: static;
     }
 
-    .topnav #myLinks {
+    #topnav #myLinks {
         display: flex !important;
         flex-flow: column nowrap;
     }
 
-    .topnav #myLinks a{
+    #topnav #myLinks a{
         height: 50px;
         padding: 16px;
         width: 100%;
     }
 
-    .topnav a.icon {
+    #topnav a.icon {
         display: none;
     }
 
