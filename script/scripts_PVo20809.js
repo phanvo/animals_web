@@ -1,3 +1,8 @@
+/*
+    External JS file
+    Author: Phan Vo - 300320809
+*/
+
 function hamburgerMenuFunc() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -44,3 +49,19 @@ function topFunction() {
 //   var footerHeight = document.getElementsByTagName("footer")[0].offsetHeight;
 //   document.getElementById("topnav").style.height = (document.body.scrollHeight - headerHeight - footerHeight).toString() + "px";
 // }
+
+
+// format phone number nicely
+function formatPhoneNumber (form) {
+  var str = form.elements["phone"].value;
+
+  //Filter only numbers from the input
+  var cleaned = ('' + str).replace(/\D/g, '');
+  
+  //Check if the input is of correct length
+  var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+
+  if (match) {
+    form.elements["phone"].value = '(' + match[1] + ') ' + match[2] + '-' + match[3];
+  }
+}

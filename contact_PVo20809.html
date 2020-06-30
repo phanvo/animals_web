@@ -1,0 +1,109 @@
+<!--
+ * Student Name:            Phan Vo
+ * Student ID:              300320809
+ * Assignment/File Name:    Final Project
+ * 
+ * Description: 
+ * 
+ * Create the Final Project with 3 pages (individual project)
+ * 
+ * References:
+ * Please check doc/Project_PVo20809.docx for references
+ *     
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Phan Vo (300320809) – Contact</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Phan Vo">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/commonStyles_PVo20809.css" rel="stylesheet">
+        <link href="css/contactStyles_PVo20809.css" rel="stylesheet">
+        <link href="css/navigation_PVo20809.css" rel="stylesheet">
+        <script src="script/scripts_PVo20809.js"></script>
+    </head>
+    <body>
+        <header>
+            Header
+        </header>
+        <nav id="topnav">
+        
+
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index_PVo20809.html">Home</a>
+                <a href="explore_PVo20809.html">Explore</a>
+                <a href="#">Contact</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuFunc()">
+                <!-- <i class="fa fa-bars"></i> -->
+            </a>
+
+            <!-- <div class="pageClass">Home</div>
+            <div class="pageClass">Explore</div>
+            <div class="pageClass">Contact</div> -->
+            
+            
+        </nav>
+        <article>
+            <section id="introSec">Contact me for more info</section>
+            <section id="sec1">
+                <form action="" method="GET">
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" pattern="[A-Za-z\s]{1,30}" required>
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" pattern="[A-Za-z\s]{1,30}" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </div>
+                    <div>
+                        <label for="gender">Gender</label>
+                        <span>
+                            <input type="radio" name="gender" id="gender1" required>Male
+                            <input type="radio" name="gender" id="gender2">Female
+                            <input type="radio" name="gender" id="gender3">Other
+                        </span>
+                    </div>
+                    <div>
+                        <label for="phone">Phone number</label>
+                        <input type="text" name="phone" id="phone" placeholder="Phone number" pattern="\(\d{3}\) \d{3}-\d{4}|\d{10}" onchange="formatPhoneNumber(this.form)" required>
+                    </div>
+                    <div>
+                        <label for="experience">Overall website experience (1=poor, 10=great)</label>
+                        <input type="range" name="experience" id="experience" min="1" max="10" step="1" required>
+                    </div>
+                    <div>
+                        <label for="enquiry">Enquiry</label>
+                        <input type="text" name="enquiry" id="enquiry" pattern="General|Technical|Events|Donate" list="enquiryList" required>
+                        <datalist id="enquiryList">
+                            <option value="General"></option>
+                            <option value="Technical"></option>
+                            <option value="Events"></option>
+                            <option value="Donate"></option>
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div id="formBtns">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </section>
+            <section id="sec2">Image animal</section>
+        </article>
+        <footer>
+            Footer
+        </footer>
+        <button onclick="topFunction()" id="backToTopBtn" title="Go to top">Top</button>
+    </body>
+</html>

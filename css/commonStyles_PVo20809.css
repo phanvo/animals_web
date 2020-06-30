@@ -62,9 +62,9 @@ article{
 }
 
 section{
-    padding: 5px;
-    height: 200px;
-    text-align: center;
+    padding: 10px;
+    /* height: 200px; */
+    /* text-align: center; */
     border: 2px dotted blue;
     font-size: 10pt;
     background-color: #f08080;

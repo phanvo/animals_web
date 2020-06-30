@@ -1,0 +1,61 @@
+/*
+    External CSS file
+    Author: Phan Vo - 300320809
+*/
+
+article{
+    grid-template-areas:
+        'introSec'
+        'sec1'
+        'sec2';
+}
+
+form div{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div#formBtns{
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+div#formBtns input{
+    height: 30px;
+    width: 50%;
+    margin: 10px 10px 5px;
+}
+
+input#firstName:focus:valid,
+input#lastName:focus:valid,
+input#email:focus:valid,
+input#enquiry:focus:valid,
+input#phone:focus:valid{
+    background: honeydew url('../images/valid_icon.png') bottom right/contain no-repeat;
+}
+
+input#firstName:focus:invalid,
+input#lastName:focus:invalid,
+input#email:focus:invalid,
+input#enquiry:focus:invalid,
+input#phone:focus:invalid{
+    background: mistyrose url('../images/invalid_icon.png') bottom right/contain no-repeat;
+}
+
+textarea#message:focus:valid{
+    background-color: honeydew;
+}
+
+textarea#message:focus:invalid{
+    background-color: mistyrose;
+}
+
+/* tablet & desktop layout */
+@media only screen and (min-width: 601px){
+    article{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'introSec introSec'
+            'sec1 sec2';
+    }
+}
