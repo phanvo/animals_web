@@ -53,15 +53,15 @@
                 <form action="" method="GET">
                     <div>
                         <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="First Name" oninput="validateFirstName(this.form)">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" pattern="^[A-Za-z\s]{1,30}$" oninput="validateFirstName(this.form)" required>
                     </div>
                     <div>
                         <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" oninput="validateLastName(this.form)">
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" pattern="^[A-Za-z\s]{1,30}$" oninput="validateLastName(this.form)" required>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Email" oninput="validateEmail(this.form)">
+                        <input type="text" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninput="validateEmail(this.form)" required>
                     </div>
                     <div>
                         <label for="gender">Gender</label>
@@ -73,7 +73,7 @@
                     </div>
                     <div>
                         <label for="phone">Phone number</label>
-                        <input type="text" name="phone" id="phone" placeholder="Phone number" oninput="validatePhoneNumber(this.form)">
+                        <input type="text" name="phone" id="phone" placeholder="Phone number" oninput="validatePhoneNumber(this.form)" required>
                     </div>
                     <div>
                         <label for="experience">Overall website experience (1=poor, 10=great)</label>
@@ -81,7 +81,7 @@
                     </div>
                     <div>
                         <label for="enquiry">Enquiry</label>
-                        <input type="text" name="enquiry" id="enquiry" list="enquiryList" oninput="validateEnquiry(this.form)">
+                        <input type="text" name="enquiry" id="enquiry" list="enquiryList" pattern="General|Technical|Events|Donate" oninput="validateEnquiry(this.form)" required>
                         <datalist id="enquiryList">
                             <option value="General"></option>
                             <option value="Technical"></option>
@@ -91,7 +91,7 @@
                     </div>
                     <div>
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" oninput="validateMessage(this.form)"></textarea>
+                        <textarea name="message" id="message" rows="10" minlength="5" maxlength="200" oninput="validateMessage(this.form)" required></textarea>
                     </div>
                     <div id="formBtns">
                         <input type="submit" value="Submit" onclick="validateForm(this.form)">

@@ -54,7 +54,7 @@ function topFunction() {
 
 function validateRequiredInput(obj){
   // check empty input
-  if(obj.value.trim().length == 0){
+  if(obj.validity.valueMissing || obj.value.trim().length == 0){
     obj.setCustomValidity("Input cannot be empty");
     return false;
   } else {
@@ -81,13 +81,10 @@ function validateName(obj, typeName){
     return;
   }
 
-  // check if the email has correct format
-  var match = obj.value.match(/^[A-Za-z\s]{1,30}$/);
-
-  if(match){
-    obj.setCustomValidity("");
-  } else {
+  if(obj.validity.patternMismatch){
     obj.setCustomValidity("Invalid " + typeName + ". Please check again");
+  } else {
+    obj.setCustomValidity("");
   }
 }
 
@@ -114,13 +111,10 @@ function validateEmail(form){
     return;
   }
 
-  // check if the email has correct format
-  var match = obj.value.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/);
-
-  if(match){
-    obj.setCustomValidity("");
-  } else {
+  if(obj.validity.patternMismatch){
     obj.setCustomValidity("Invalid email. Please check again");
+  } else {
+    obj.setCustomValidity("");
   }
 }
 
@@ -163,17 +157,16 @@ function validatePhoneNumber (form) {
 // validate enquiry
 function validateEnquiry(form){
   var obj = form.elements["enquiry"];
-  var enquiry = obj.value;
 
   var isValid = validateRequiredInput(obj);
   if(!isValid){
     return;
   }
 
-  if(enquiry == "General" || enquiry == "Technical" || enquiry == "Events" || enquiry == "Donate"){
-    obj.setCustomValidity("");
-  } else {
+  if(obj.validity.patternMismatch){
     obj.setCustomValidity("Invalid enquiry. Please check again");
+  } else {
+    obj.setCustomValidity("");
   }
 }
 
@@ -181,5 +174,14 @@ function validateEnquiry(form){
 function validateMessage(form){
   var obj = form.elements["message"];
 
-  validateRequiredInput(obj);
+  var isValid = validateRequiredInput(obj);
+  if(!isValid){
+    return;
+  }
+
+  if(obj.validity.tooShort || obj.validity.tooLong){
+    obj.setCustomValidity("Message length must be between 5 and 200");
+  } else {
+    obj.setCustomValidity("");
+  }
 }
