@@ -53,35 +53,35 @@
                 <form action="" method="GET">
                     <div>
                         <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="First Name" pattern="[A-Za-z\s]{1,30}" required>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" oninput="validateFirstName(this.form)">
                     </div>
                     <div>
                         <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" pattern="[A-Za-z\s]{1,30}" required>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" oninput="validateLastName(this.form)">
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <input type="text" name="email" id="email" placeholder="Email" oninput="validateEmail(this.form)">
                     </div>
                     <div>
                         <label for="gender">Gender</label>
                         <span>
-                            <input type="radio" name="gender" id="gender1" required>Male
+                            <input type="radio" name="gender" id="gender1">Male
                             <input type="radio" name="gender" id="gender2">Female
                             <input type="radio" name="gender" id="gender3">Other
                         </span>
                     </div>
                     <div>
                         <label for="phone">Phone number</label>
-                        <input type="text" name="phone" id="phone" placeholder="Phone number" pattern="\(\d{3}\) \d{3}-\d{4}|\d{10}" onchange="formatPhoneNumber(this.form)" required>
+                        <input type="text" name="phone" id="phone" placeholder="Phone number" oninput="validatePhoneNumber(this.form)">
                     </div>
                     <div>
                         <label for="experience">Overall website experience (1=poor, 10=great)</label>
-                        <input type="range" name="experience" id="experience" min="1" max="10" step="1" required>
+                        <input type="range" name="experience" id="experience" min="1" max="10" step="1">
                     </div>
                     <div>
                         <label for="enquiry">Enquiry</label>
-                        <input type="text" name="enquiry" id="enquiry" pattern="General|Technical|Events|Donate" list="enquiryList" required>
+                        <input type="text" name="enquiry" id="enquiry" list="enquiryList" oninput="validateEnquiry(this.form)">
                         <datalist id="enquiryList">
                             <option value="General"></option>
                             <option value="Technical"></option>
@@ -91,10 +91,10 @@
                     </div>
                     <div>
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10" oninput="validateMessage(this.form)"></textarea>
                     </div>
                     <div id="formBtns">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" onclick="validateForm(this.form)">
                         <input type="reset" value="Reset">
                     </div>
                 </form>
