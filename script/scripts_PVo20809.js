@@ -4,11 +4,11 @@
 */
 
 function hamburgerMenuFunc() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  var menu = document.getElementById("myLinks");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
   } else {
-    x.style.display = "block";
+    menu.style.display = "block";
   }
 }
 
@@ -32,21 +32,7 @@ window.onscroll = function() {
 };
 
 // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
+function topPageFunc() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-
-// adjust navigation bar height dynamically when all contents loaded
-// window.onload = function() {
-//   // only handle back to top button for desktop layout
-//   if (screen.width < 769){
-//     return;
-//   }
-
-//   var headerHeight = document.getElementsByTagName("header")[0].offsetHeight;
-//   var footerHeight = document.getElementsByTagName("footer")[0].offsetHeight;
-//   document.getElementById("topnav").style.height = (document.body.scrollHeight - headerHeight - footerHeight).toString() + "px";
-// }
-
