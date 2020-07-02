@@ -62,9 +62,9 @@ nav a.icon {
 /* desktop layout */
 @media only screen and (min-width: 769px){
     nav {
-        float: left;
-        width: 20%;
-        height: 640px;
+        /* float: left; */
+        /* width: 20%; */
+        /* height: 640px; */
 
         position: static;
     }

@@ -3,9 +3,11 @@
     Author: Phan Vo - 300320809
 */
 
+
+
 /* desktop layout */
-@media only screen and (min-width: 769px){
-    #topnav{
+/* @media only screen and (min-width: 769px){
+    nav{
         height: 1480px !important;
     }
-}
+} */

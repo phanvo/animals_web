@@ -8,6 +8,7 @@
 @media only screen and (min-width: 601px){
     article{
         /* width: 80%; */
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             'introSec introSec'
             'sec1 sec2'
@@ -16,9 +17,12 @@
     }
 }
 
+
+
 /* desktop layout */
 @media only screen and (min-width: 769px){
     article{
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
             'introSec introSec introSec' 
             'sec1 sec2 sec3'
