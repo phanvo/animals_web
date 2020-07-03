@@ -11,3 +11,32 @@
         height: 1480px !important;
     }
 } */
+
+section[id^="sec"] {
+    text-align: left;
+}
+
+blockquote{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* iframe{
+    width: 100%;
+    height: 500px;
+} */
+
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+#video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
