@@ -67,7 +67,7 @@ section{
     padding: 10px;
     /* height: 200px; */
     /* text-align: center; */
-    border: 2px dotted blue;
+    /* border: 2px dotted blue; */
     font-size: 10pt;
     background-color: #f08080;
 }
@@ -81,9 +81,15 @@ section[id^="sec"]{
     text-align: center;
 }
 
+#introSec p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 footer{
     clear: both;
     height: 40px;
+    text-align: right;
 }
 
 
@@ -93,7 +99,7 @@ footer{
 @media only screen and (min-width: 601px){
     section{
         background-color: yellow;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         font-size: 12pt;
     }
 }
@@ -118,7 +124,7 @@ footer{
 
     section{
         background-color: #90ee90;
-        border: 3px double blue;
+        /* border: 3px double blue; */
         font-size: 14pt;
     }
 
