@@ -4,6 +4,14 @@
 */
 
 
+nav a:first-child{
+    background-color: #3b6978;
+}
+
+nav a:first-child:visited{
+    color: white;
+}
+
 /* tablet layout */
 @media only screen and (min-width: 601px){
     article{
