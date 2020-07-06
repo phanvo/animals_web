@@ -20,13 +20,10 @@ nav #myLinks {
 }
 
 /* Style navigation menu links */
-nav a {
+nav a, a:visited {
     padding: 14px 16px;
     text-decoration: none;
     display: block;
-}
-
-nav a:visited{
     color:black;
 }
 

@@ -36,3 +36,42 @@ function topPageFunc() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+window.onload = function () { 
+  startClockTime();
+
+  var currentPage = window.location.pathname.split("/").pop();
+  if(currentPage.startsWith("contact")){
+    randomAddressImage();
+  }
+};
+
+function startClockTime() {
+  var today = new Date();
+  
+  var dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' });
+  var [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(today);
+
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('clock').innerHTML = month + ", " + day + ", " + year + " " + h + ":" + m + ":" + s;
+  setTimeout(startClockTime, 500);
+}
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;  // add zero in front of numbers < 10
+  }
+  return i;
+}
+
+function randomAddressImage(){
+  var folderPath = "images/";
+  var fishes = ["cuttlefish.jpg", "killerwhale.jpg", "mandarinfish.jpg", "lionfish.jpg", "piranha.jpg", "tigershark.jpg"];
+  var randomFish = fishes[Math.floor(Math.random() * fishes.length)];
+
+  document.getElementById("addressImg").src = folderPath + randomFish;
+}

@@ -39,11 +39,21 @@ header{
     justify-content: center;
     font-size: 25pt;
     font-weight: bold;
+    position: relative;
 }
 
 header img:last-child{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+header #clock{
+    position: absolute;
+    top: 220px;
+    right: 10px;
+    color: white;
+    font-size: medium;
+    font-weight: normal;
 }
 
 header { grid-area: header; }
