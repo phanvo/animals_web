@@ -3,8 +3,8 @@
     Author: Phan Vo - 300320809
 */
 
+// check empty input
 function validateRequiredInput(obj){
-    // check empty input
     if(obj.validity.valueMissing || obj.value.trim().length == 0){
         obj.setCustomValidity("Input cannot be empty");
         return false;
@@ -12,7 +12,7 @@ function validateRequiredInput(obj){
         obj.setCustomValidity("");
         return true;
     }
-}
+} // end validateRequiredInput
 
 // validate form
 function validateForm(form){
@@ -23,7 +23,7 @@ function validateForm(form){
     validatePhoneNumber(form);
     validateEnquiry(form);
     validateMessage(form);
-}
+} // end validateForm
 
 // validate name
 function validateName(obj, typeName){
@@ -37,21 +37,21 @@ function validateName(obj, typeName){
     } else {
         obj.setCustomValidity("");
     }
-}
+} // end validateName
 
 // validate first name
 function validateFirstName(form){
     var obj = form.elements["firstName"];
 
     validateName(obj, "first name");
-}
+} // end validateFirstName
 
 // validate last name
 function validateLastName(form){
     var obj = form.elements["lastName"];
 
     validateName(obj, "last name");
-}
+} // end validateLastName
 
 // validate email
 function validateEmail(form){
@@ -67,7 +67,7 @@ function validateEmail(form){
     } else {
         obj.setCustomValidity("");
     }
-}
+} // end validateEmail
 
 // validate gender
 function validateGender(form){
@@ -80,10 +80,10 @@ function validateGender(form){
     } else {
         form["gender1"].setCustomValidity("Please select one of these genders");
     }
-}
+} // end validateGender
 
 // validate and format phone number nicely
-function validatePhoneNumber (form) {
+function validatePhoneNumber(form) {
     var obj = form.elements["phone"];
 
     var isValid = validateRequiredInput(obj);
@@ -103,7 +103,7 @@ function validatePhoneNumber (form) {
     } else {
         obj.setCustomValidity("Invalid phone number. Only 10-digit number is allowed");
     }
-}
+} // end validatePhoneNumber
 
 // validate enquiry
 function validateEnquiry(form){
@@ -119,7 +119,7 @@ function validateEnquiry(form){
     } else {
         obj.setCustomValidity("");
     }
-}
+} // end validateEnquiry
 
 // validate message
 function validateMessage(form){
@@ -135,4 +135,4 @@ function validateMessage(form){
     } else {
         obj.setCustomValidity("");
     }
-}
+} // end validateMessage

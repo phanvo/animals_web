@@ -10,7 +10,7 @@ function hamburgerMenuFunc() {
   } else {
     menu.style.display = "block";
   }
-}
+} // end hamburgerMenuFunc
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
@@ -35,7 +35,7 @@ window.onscroll = function() {
 function topPageFunc() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+} // end topPageFunc
 
 window.onload = function () { 
   startClockTime();
@@ -59,14 +59,14 @@ function startClockTime() {
   s = checkTime(s);
   document.getElementById('clock').innerHTML = month + ", " + day + ", " + year + " " + h + ":" + m + ":" + s;
   setTimeout(startClockTime, 500);
-}
+} // end startClockTime
 
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;  // add zero in front of numbers < 10
   }
   return i;
-}
+} // end checkTime
 
 function randomAddressImage(){
   var folderPath = "images/";
@@ -74,4 +74,4 @@ function randomAddressImage(){
   var randomFish = fishes[Math.floor(Math.random() * fishes.length)];
 
   document.getElementById("addressImg").src = folderPath + randomFish;
-}
+} // end randomAddressImage
