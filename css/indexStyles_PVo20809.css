@@ -3,7 +3,7 @@
     Author: Phan Vo - 300320809
 */
 
-
+/* update color for Home page link */
 nav a:first-child{
     background-color: #3b6978;
 }
@@ -24,8 +24,6 @@ nav a:first-child:visited{
             'sec5 sec6';
     }
 }
-
-
 
 /* desktop layout */
 @media only screen and (min-width: 769px){

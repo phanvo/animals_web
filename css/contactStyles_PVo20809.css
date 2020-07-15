@@ -3,6 +3,7 @@
     Author: Phan Vo - 300320809
 */
 
+/* update color for Contact page link */
 nav a:nth-child(3){
     background-color: #3b6978;
 }
@@ -47,6 +48,7 @@ address p{
     margin-bottom: 10px;
 }
 
+/* create CSS inline validations for the form */
 input#firstName:focus:valid,
 input#lastName:focus:valid,
 input#email:focus:valid,

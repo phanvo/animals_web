@@ -10,16 +10,15 @@ nav{
     background-color: #cae8d5;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 99;    /* prevent overlapping */
 }
 
-  
-/* Hide the links inside the navigation menu */
+/* hide links inside hamburger menu */
 nav #myLinks {
     display: none;
 }
 
-/* Style navigation menu links */
+/* style links inside hamburger menu */
 nav a, a:visited {
     padding: 14px 16px;
     text-decoration: none;
@@ -31,7 +30,7 @@ nav a:hover{
     background-color: #3b6978;
 }
 
-/* Style the hamburger menu */
+/* style hamburger menu */
 nav a.icon {
     background-image: url('../images/hamburger_menu_icon.png');
     background-size: contain;
@@ -41,8 +40,6 @@ nav a.icon {
     top: 6px;
     background-color: transparent;
 }
-
-
 
 /* tablet layout */
 @media only screen and (min-width: 601px){
@@ -69,10 +66,6 @@ nav a.icon {
 /* desktop layout */
 @media only screen and (min-width: 769px){
     nav {
-        /* float: left; */
-        /* width: 20%; */
-        /* height: 640px; */
-
         position: static;
     }
 
