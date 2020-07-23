@@ -48,6 +48,73 @@ address p{
     margin-bottom: 10px;
 }
 
+/* modal (background) for form submitting */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 100px;
+    width: 100%;
+    height: 100%; 
+}
+
+/* modal content for form submitting */
+.modal-content {
+    position: relative;
+    background-color: #b8cfd1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* add modal animation for form submitting */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* close button for form submitting */
+.close {
+    color: white;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* style modal header and body */
+.modal-header {
+    padding: 10px;
+    background-color: #3b6978;
+    color: white;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
 /* create CSS inline validations for the form */
 input#firstName:focus:valid,
 input#lastName:focus:valid,

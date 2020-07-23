@@ -23,6 +23,9 @@ function validateForm(form){
     validatePhoneNumber(form);
     validateEnquiry(form);
     validateMessage(form);
+
+    // handle form event when submitting
+    form.addEventListener('submit', handleFormEvent);
 } // end validateForm
 
 // validate name

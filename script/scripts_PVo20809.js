@@ -47,6 +47,26 @@ window.onload = function () {
   }
 }; // end onload event
 
+// handle form event at Contact page to display thank you message
+function handleFormEvent(event){
+  event.preventDefault();
+
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";      // open modal window
+
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+      modal.style.display = "none";   // close the modal when clicking "x"
+  }
+
+  // close the modal when clicking anywhere outside of the modal
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+} // end handleFormEvent
+
 // handle clock with date
 function startClockTime() {
   var today = new Date();   // get current date
