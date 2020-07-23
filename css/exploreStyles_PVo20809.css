@@ -22,14 +22,14 @@ blockquote{
 }
 
 /* create responsive layout for iframe videos */
-#video-container {
+.video-container {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
 }
 
-#video-container iframe {
+.video-container iframe {
     position: absolute;
     width: 100%;
     height: 100%;
